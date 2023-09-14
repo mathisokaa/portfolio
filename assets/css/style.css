@@ -256,9 +256,17 @@ img {
 .home__social{
   display: grid;
   grid-template-columns: max-content;
-  row-gap: .25rem;  /* -> 1rem de base */
+  row-gap: .5rem;  /* -> 1rem de base */
 }
 
+.home__social-icon{
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.home__social-icon:hover{
+  color: var(--first-color-alt);
+}
 
 
 /*==================== BUTTONS ====================*/
