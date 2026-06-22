@@ -7,7 +7,7 @@ import Button from "./Button";
 import StatBlock from "./StatBlock";
 import { profile } from "@/data/profile";
 
-const ZOOM = 1.9;
+const ZOOM = 1.3;
 const INTRO_END = 0.14;
 
 export default function HomeHero() {
@@ -109,7 +109,7 @@ export default function HomeHero() {
               className="relative w-full overflow-hidden"
               style={{
                 height: "clamp(280px, 52vh, 580px)",
-                aspectRatio: "168 / 220",
+                aspectRatio: "21 / 20",
               }}
             >
               <div
