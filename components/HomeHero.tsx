@@ -18,18 +18,15 @@ export default function HomeHero() {
 
   useEffect(() => {
     const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const desktopQuery = window.matchMedia("(min-width: 1024px)");
 
     const updateEnabled = () => {
-      setScrollStoryEnabled(desktopQuery.matches && !reducedMotionQuery.matches);
+      setScrollStoryEnabled(!reducedMotionQuery.matches);
     };
 
     updateEnabled();
     reducedMotionQuery.addEventListener("change", updateEnabled);
-    desktopQuery.addEventListener("change", updateEnabled);
     return () => {
       reducedMotionQuery.removeEventListener("change", updateEnabled);
-      desktopQuery.removeEventListener("change", updateEnabled);
     };
   }, []);
 
@@ -100,8 +97,8 @@ export default function HomeHero() {
   return (
     <>
       <div ref={sectionRef} className="relative" style={{ height: scrollStoryEnabled ? "420vh" : "auto" }}>
-        <div className={scrollStoryEnabled ? "sticky top-0 h-screen overflow-hidden" : "relative pt-[88px]"}>
-          <div className="flex h-full flex-col items-center justify-center gap-6 px-4 sm:px-6">
+        <div className={scrollStoryEnabled ? "sticky top-0 h-dvh overflow-hidden" : "relative pt-[88px]"}>
+          <div className="flex h-full flex-col items-center justify-center gap-4 px-4 sm:gap-6 sm:px-6">
             <span className="inline-flex items-center gap-1.5 rounded-pill border border-border bg-surface px-3 py-1">
               <span className="h-[6px] w-[6px] rounded-full bg-accent" style={{ boxShadow: "0 0 5px #ff5c00" }} aria-hidden="true" />
               <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-accent">{active.tag}</span>
@@ -111,7 +108,7 @@ export default function HomeHero() {
               ref={windowRef}
               className="relative w-full overflow-hidden"
               style={{
-                height: "min(64vh, 580px)",
+                height: "clamp(280px, 52vh, 580px)",
                 aspectRatio: "168 / 220",
               }}
             >
@@ -145,12 +142,12 @@ export default function HomeHero() {
                   />
                   <div
                     className="pointer-events-none absolute inset-y-0 left-0 z-10"
-                    style={{ width: "14%", background: "linear-gradient(to right, #000d66 0%, transparent 100%)" }}
+                    style={{ width: "8%", background: "linear-gradient(to right, #000d66 0%, transparent 100%)" }}
                     aria-hidden="true"
                   />
                   <div
                     className="pointer-events-none absolute inset-y-0 right-0 z-10"
-                    style={{ width: "14%", background: "linear-gradient(to left, #000d66 0%, transparent 100%)" }}
+                    style={{ width: "8%", background: "linear-gradient(to left, #000d66 0%, transparent 100%)" }}
                     aria-hidden="true"
                   />
                 </>
