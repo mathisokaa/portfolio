@@ -109,16 +109,15 @@ export default function HomeHero() {
 
             <div
               ref={windowRef}
-              className="relative w-full overflow-hidden rounded-2xl border border-border bg-surface/40"
+              className="relative w-full overflow-hidden"
               style={{
-                height: "min(54vh, 480px)",
+                height: "min(64vh, 580px)",
                 aspectRatio: "168 / 220",
-                boxShadow: "0 0 40px rgba(255,92,0,0.12)",
               }}
             >
               <div
                 className="pointer-events-none absolute inset-0"
-                style={{ background: "radial-gradient(ellipse at 50% 30%, rgba(255,92,0,0.18) 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(ellipse at 50% 30%, rgba(255,92,0,0.22) 0%, transparent 72%)" }}
                 aria-hidden="true"
               />
               <div
@@ -132,6 +131,30 @@ export default function HomeHero() {
               >
                 <RackSVG fill={effectiveProgress} style={{ height: "100%", width: "auto", maxWidth: "none" }} />
               </div>
+              {scrollStoryEnabled && (
+                <>
+                  <div
+                    className="pointer-events-none absolute inset-x-0 top-0 z-10"
+                    style={{ height: "22%", background: "linear-gradient(to bottom, #000d66 0%, transparent 100%)" }}
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 z-10"
+                    style={{ height: "22%", background: "linear-gradient(to top, #000d66 0%, transparent 100%)" }}
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-y-0 left-0 z-10"
+                    style={{ width: "14%", background: "linear-gradient(to right, #000d66 0%, transparent 100%)" }}
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-y-0 right-0 z-10"
+                    style={{ width: "14%", background: "linear-gradient(to left, #000d66 0%, transparent 100%)" }}
+                    aria-hidden="true"
+                  />
+                </>
+              )}
             </div>
 
             <div className="relative h-[110px] w-full max-w-md text-center sm:h-[96px]">
