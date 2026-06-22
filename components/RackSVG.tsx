@@ -3,6 +3,7 @@ import { rackUnits } from "@/data/rack";
 interface RackSVGProps {
   fill?: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const UNIT_HEIGHT = 16;
@@ -11,7 +12,7 @@ const LED_COLOR = "#00ff88";
 const LED_OFF = "#071535";
 const CABLE_COLORS = ["#ff5c00", "#00aaff", "#b44fff"];
 
-export default function RackSVG({ fill = 1, className = "" }: RackSVGProps) {
+export default function RackSVG({ fill = 1, className = "", style }: RackSVGProps) {
   const totalUnits = rackUnits.reduce((sum, u) => sum + u.heightU, 0);
   const rackHeight = totalUnits * UNIT_HEIGHT + 28;
 
@@ -32,7 +33,7 @@ export default function RackSVG({ fill = 1, className = "" }: RackSVGProps) {
       aria-label="Baie réseau 12U représentant firewall, routeur, switches, patch panels, serveurs et PDU"
       viewBox={`0 0 ${RACK_WIDTH} ${rackHeight}`}
       className={`h-auto w-full max-w-[280px] ${className}`}
-      style={{ filter: "drop-shadow(0 0 16px rgba(255,92,0,0.27))" }}
+      style={{ filter: "drop-shadow(0 0 16px rgba(255,92,0,0.27))", ...style }}
     >
       <rect x={1} y={1} width={RACK_WIDTH - 2} height={rackHeight - 2} rx={6} fill="#040d26" stroke="#1a3a8a" strokeWidth={2} />
       <rect x={1} y={10} width={12} height={rackHeight - 20} rx={3} fill="#0a1a50" stroke="#1a3a8a" strokeWidth={0.8} />
