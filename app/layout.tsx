@@ -12,10 +12,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Mathis Megnan",
-    template: "%s",
-  },
+  title: "Mathis Megnan",
   description:
     "Portfolio de Mathis Megnan, Administrateur Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
   icons: {

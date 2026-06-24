@@ -4,7 +4,6 @@ import ProjectsGrid from "@/components/ProjectsGrid";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projets",
   description: "Réalisations techniques en réseau, système, sécurité, monitoring et cloud.",
 };
 
