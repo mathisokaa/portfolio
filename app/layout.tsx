@@ -13,15 +13,19 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Prénom Nom — Administrateur Systèmes & Réseaux",
+    default: "Mathis Megnan",
     template: "%s",
   },
   description:
-    "Portfolio de Prénom Nom, Administrateur Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
+    "Portfolio de Mathis Megnan, Administrateur Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
-    title: "Prénom Nom — Administrateur Systèmes & Réseaux",
+    title: "Mathis Megnan",
     description:
-      "Portfolio de Prénom Nom, Administrateur Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
+      "Portfolio de Mathis Megnan, Administrateur Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
     type: "website",
     locale: "fr_FR",
   },
