@@ -15,6 +15,7 @@ export default function HomeHero() {
   const windowRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
   const [scrollStoryEnabled, setScrollStoryEnabled] = useState(false);
+  const [windowHeight, setWindowHeight] = useState(0);
 
   useEffect(() => {
     const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -28,6 +29,19 @@ export default function HomeHero() {
     return () => {
       reducedMotionQuery.removeEventListener("change", updateEnabled);
     };
+  }, []);
+
+  useEffect(() => {
+    const el = windowRef.current;
+    if (!el) return;
+
+    const observer = new ResizeObserver(([entry]) => {
+      setWindowHeight(entry.target.clientHeight);
+    });
+    observer.observe(el);
+    setWindowHeight(el.clientHeight);
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -85,7 +99,6 @@ export default function HomeHero() {
   const introT = Math.min(1, effectiveProgress / INTRO_END);
   const scale = scrollStoryEnabled ? 1 + introT * (ZOOM - 1) : 1;
   const panT = scrollStoryEnabled ? Math.max(0, (effectiveProgress - INTRO_END) / (1 - INTRO_END)) : 0;
-  const windowHeight = windowRef.current?.clientHeight ?? 0;
   const panRange = (scale - 1) * windowHeight;
   const translateY = -panT * panRange;
 
