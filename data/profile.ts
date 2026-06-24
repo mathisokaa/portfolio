@@ -1,8 +1,8 @@
 export const profile = {
   firstName: "Prénom",
   lastName: "Nom",
-  handle: "SYS.TECH",
-  role: "Technicien Sys. & Réseaux",
+  handle: "ADMIN.SYS",
+  role: "Administrateur Systèmes & Réseaux",
   email: "email@domain.com",
   linkedin: "linkedin.com/in/prenom-nom",
   github: "github.com/prenom-nom",
@@ -21,7 +21,7 @@ export const profile = {
       pct: 0,
       title: "CONSTRUIRE",
       italic: "l'infrastructure de demain",
-      tag: "Technicien Sys. & Réseaux",
+      tag: "Administrateur Sys. & Réseaux",
     },
     {
       pct: 0.28,

@@ -13,15 +13,15 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Prénom Nom — Technicien Systèmes & Réseaux",
+    default: "Prénom Nom — Administrateur Systèmes & Réseaux",
     template: "%s — Prénom Nom",
   },
   description:
-    "Portfolio de Prénom Nom, Technicien Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
+    "Portfolio de Prénom Nom, Administrateur Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
   openGraph: {
-    title: "Prénom Nom — Technicien Systèmes & Réseaux",
+    title: "Prénom Nom — Administrateur Systèmes & Réseaux",
     description:
-      "Portfolio de Prénom Nom, Technicien Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
+      "Portfolio de Prénom Nom, Administrateur Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
     type: "website",
     locale: "fr_FR",
   },
