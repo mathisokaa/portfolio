@@ -3,7 +3,6 @@ import BackgroundBlobs from "@/components/BackgroundBlobs";
 import VeilleGrid from "@/components/VeilleGrid";
 
 export const metadata: Metadata = {
-  title: "Veille technologique",
   description: "Articles de veille technologique : sécurité, réseau, cloud et IA & ops.",
 };
 

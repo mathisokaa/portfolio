@@ -4,7 +4,6 @@ import ContactForm from "@/components/ContactForm";
 import { profile } from "@/data/profile";
 
 export const metadata: Metadata = {
-  title: "Contact",
   description: "Disponible pour une alternance, un stage ou un premier poste en administration système & réseaux.",
 };
 
