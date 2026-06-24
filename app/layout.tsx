@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: {
     default: "Prénom Nom — Administrateur Systèmes & Réseaux",
-    template: "%s — Prénom Nom",
+    template: "%s",
   },
   description:
     "Portfolio de Prénom Nom, Administrateur Systèmes & Réseaux : projets d'infrastructure, sécurité, supervision et veille technologique.",
